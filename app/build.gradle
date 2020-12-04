@@ -13,12 +13,17 @@ android {
 
     defaultConfig {
         applicationId "com.ydh.chatyok"
-        minSdkVersion 22
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures{
+        viewBinding true
+        dataBinding true
     }
 
     buildTypes {
@@ -43,6 +48,11 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    // UI
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -78,4 +88,9 @@ dependencies {
 
     // OkHttp
     implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+
+    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+
+
 }
